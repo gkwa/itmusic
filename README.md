@@ -222,3 +222,49 @@ gitGraph
    checkout main
    merge feature/astound tag: "v1.0"
 ```
+
+# Astound Project Development Flow
+
+```mermaid
+gitGraph
+    commit id: "initial-setup" tag: "v0.1"
+    commit id: "playwright-template"
+
+    branch feature/astound
+    checkout feature/astound
+    commit id: "add-scraping-logic"
+    commit id: "basic-scraping-working"
+
+    branch feature/telemetry
+    checkout feature/telemetry
+    commit id: "add-opentelemetry"
+    commit id: "ot-instrumentation"
+    commit id: "ot-complexity"
+
+    checkout feature/astound
+    merge feature/telemetry
+    commit id: "simplify-logic"
+
+    branch feature/tests
+    checkout feature/tests
+    commit id: "add-test-framework"
+    commit id: "add-unit-tests"
+    commit id: "improve-coverage"
+
+    checkout feature/astound
+    merge feature/tests
+
+    checkout main
+    merge feature/astound tag: "v1.0"
+```
+
+Now the development flow shows:
+
+1. Initial setup
+2. Astound feature branch
+3. Telemetry branch with complexity
+4. Back to astound for simplification
+5. Separate testing branch for proper test implementation
+6. Final merge back to main
+
+Is this closer to what you were envisioning?
