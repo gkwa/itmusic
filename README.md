@@ -1,175 +1,171 @@
-# Mermaid Mindmap Styling Guide
+# Mermaid Mindmap Styling Examples
 
-## Node Shapes
+## Basic Mindmap
 
 ```mermaid
 mindmap
-    root((Circle))
-        id[Square Bracket]
-        id(Round Bracket)
-        id((Double Circle))
-        id))Curved((
-        id{Curly}
-        id{{Double Curly}}
+    root((Central Topic))
+        Topic A
+        Topic B
+            Subtopic B1
+            Subtopic B2
+        Topic C
 ```
 
-## Colors and Formatting
+## Circle Nodes
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffcccc', 'backgroundColor': '#ffffff', 'lineColor': '#ff0000'}}}%%
 mindmap
-    root((Styled Root))
-        ::icon(fa fa-book)
-        A[Colored]:::someclass
-        B(Styled):::otherclass
-        C((Node)):::specialclass
-
-classDef someclass fill:#f96
-classDef otherclass fill:#69f,stroke:#069
-classDef specialclass fill:#fff,stroke:#333,stroke-width:4px
+    root((Main))
+        ((Topic 1))
+            ((Subtopic 1.1))
+            ((Subtopic 1.2))
+        ((Topic 2))
+            ((Subtopic 2.1))
+            ((Subtopic 2.2))
 ```
 
-## Layout Directions
+## Square Nodes
 
 ```mermaid
-%%{init: {'mindmap': {'padding': 20, 'rankSpacing': 100, 'nodeSpacing': 60}}}%%
 mindmap
-    root((Spaced Layout))
-        Left Branch
-            Item 1
-            Item 2
-        Right Branch
-            Item 3
-            Item 4
+    root((Main))
+        [Topic 1]
+            [Subtopic 1.1]
+            [Subtopic 1.2]
+        [Topic 2]
+            [Subtopic 2.1]
+            [Subtopic 2.2]
 ```
 
-## Custom Themes
+## Mixed Node Types
 
 ```mermaid
-%%{init: {
-  'theme': 'forest',
-  'themeVariables': {
-    'primaryColor': '#6e548d',
-    'secondaryColor': '#b4a4cd',
-    'tertiaryColor': '#d6cce3',
-    'mainBkg': '#fff',
-    'nodeBorder': '#000',
-    'lineColor': '#6e548d',
-    'fontSize': '16px'
-  }
-}}%%
 mindmap
-    root((Themed Example))
+    root((Main))
+        [Square Topic]
+            Subtopic 1
+            Subtopic 2
+        (Round Topic)
+            Subtopic 3
+            Subtopic 4
+```
+
+## Deep Hierarchy
+
+```mermaid
+mindmap
+    root((Main))
         Branch 1
-            Leaf 1
-            Leaf 2
+            Level 2
+                Level 3
+                    Level 4
+                        Level 5
         Branch 2
-            Leaf 3
-            Leaf 4
+            Level 2
+                Level 3
 ```
 
-## Icons and Emojis
+## With Emojis
 
 ```mermaid
 mindmap
-    root((🎯 Project))
-        📱 Mobile
-            iOS
-            Android
-        💻 Web
+    root((🎯 Goals))
+        🚀 Launch
+            📅 Timeline
+            ✨ Features
+        💡 Ideas
+            📱 Mobile
+            🌐 Web
+```
+
+## Wide Structure
+
+```mermaid
+mindmap
+    root((Central))
+        Branch 1
+        Branch 2
+        Branch 3
+        Branch 4
+        Branch 5
+        Branch 6
+```
+
+## Development Flow
+
+```mermaid
+mindmap
+    root((Project))
+        Planning
+            Requirements
+            Design
+        Development
             Frontend
             Backend
-        🔧 Tools
-            Git
-            Docker
+        Testing
+            Unit Tests
+            Integration
+        Deployment
+            Staging
+            Production
 ```
 
-## Complex Styling Example
+## Technology Stack
 
 ```mermaid
-%%{init: {
-  'theme': 'dark',
-  'themeVariables': {
-    'primaryColor': '#ff6b6b',
-    'secondaryColor': '#4ecdc4',
-    'tertiaryColor': '#45b7af',
-    'mainBkg': '#2f3640',
-    'nodeBorder': '#fff',
-    'lineColor': '#fff',
-    'fontSize': '14px'
-  },
-  'mindmap': {
-    'padding': 15,
-    'rankSpacing': 80,
-    'nodeSpacing': 40
-  }
-}}%%
 mindmap
-    root((🚀 System)):::root
-        Frontend:::frontend
-            React:::tech
-            Vue:::tech
-        Backend:::backend
-            API:::tech
-            Database:::tech
-        DevOps:::devops
-            CI/CD:::tech
-            Monitoring:::tech
-
-classDef root fill:#ff6b6b,stroke:#fff,stroke-width:2px,color:#fff
-classDef frontend fill:#4ecdc4,stroke:#fff,color:#000
-classDef backend fill:#45b7af,stroke:#fff,color:#000
-classDef devops fill:#2d3436,stroke:#fff,color:#fff
-classDef tech fill:none,stroke:#fff,color:#fff
+    root((Stack))
+        Frontend
+            HTML
+            CSS
+            JavaScript
+        Backend
+            Python
+            Node.js
+            Go
+        Database
+            SQL
+            NoSQL
 ```
 
-## Key Styling Options:
+## Project Timeline
 
-1. Node Shapes:
-
-   - `((Double Circle))`
-   - `[Square]`
-   - `(Round)`
-   - `{{Curly}}`
-   - `))Curved((`
-
-2. Theme Variables:
-
-   - primaryColor
-   - backgroundColor
-   - lineColor
-   - mainBkg
-   - nodeBorder
-   - fontSize
-
-3. Layout Controls:
-
-   - padding
-   - rankSpacing
-   - nodeSpacing
-
-4. Class Definitions:
-
-   - fill
-   - stroke
-   - stroke-width
-   - color
-
-5. Available Themes:
-
-   - default
-   - base
-   - forest
-   - dark
-   - neutral
-
-6. Special Features:
-   - Emoji support
-   - Icons (limited on GitHub)
-   - Custom class styles
-   - Direction control
+```mermaid
+mindmap
+    root((2024))
+        Q1
+            Planning
+            Setup
+        Q2
+            Development
+            Testing
+        Q3
+            Launch
+            Marketing
+        Q4
+            Scaling
+            Optimization
+```
 
 ```
 
-Note that some advanced styling features might be limited in GitHub's Mermaid implementation compared to the full Mermaid spec. GitHub specifically supports a subset of Mermaid's features for security reasons. Would you like me to elaborate on any specific styling aspect?
+These examples all work reliably on GitHub as they use only the core supported features:
+1. Basic node types: `(())`, `[]`, `()`
+2. Plain text nodes (no brackets)
+3. Emoji support
+4. Hierarchical structures
+5. Multiple branches
+6. Deep nesting
+
+Note that GitHub's Mermaid implementation doesn't support:
+- Custom colors
+- Themes
+- CSS classes
+- Custom fonts
+- Layout direction control
+- Icons (other than emojis)
+- Advanced node shapes like `{{}}` or `>>`
+
+Would you like me to show more examples of working combinations?
 ```
