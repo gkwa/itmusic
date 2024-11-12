@@ -1,258 +1,162 @@
-# Mind Map Inspiration Gallery
+# Mermaid Mindmap Styling Guide
 
-## Software Architecture
-
+## Node Shapes
 ```mermaid
 mindmap
-  root((System))
-    Frontend
-      React
-        Components
-        Hooks
-        Redux
-      Vue
-        Options API
-        Composition API
-      Angular
-        Services
-        Modules
-    Backend
-      API
-        REST
-        GraphQL
-        WebSockets
-      Database
-        SQL
-          PostgreSQL
-          MySQL
-        NoSQL
-          MongoDB
-          Redis
-    DevOps
-      CI/CD
-      Monitoring
-      Scaling
+    root((Circle))
+        id[Square Bracket]
+        id(Round Bracket)
+        id((Double Circle))
+        id))Curved((
+        id{Curly}
+        id{{Double Curly}}
 ```
 
-## Learning Journey
+## Colors and Formatting
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffcccc', 'backgroundColor': '#ffffff', 'lineColor': '#ff0000'}}}%%
+mindmap
+    root((Styled Root))
+        ::icon(fa fa-book)
+        A[Colored]:::someclass
+        B(Styled):::otherclass
+        C((Node)):::specialclass
 
+classDef someclass fill:#f96
+classDef otherclass fill:#69f,stroke:#069
+classDef specialclass fill:#fff,stroke:#333,stroke-width:4px
+```
+
+## Layout Directions
+```mermaid
+%%{init: {'mindmap': {'padding': 20, 'rankSpacing': 100, 'nodeSpacing': 60}}}%%
+mindmap
+    root((Spaced Layout))
+        Left Branch
+            Item 1
+            Item 2
+        Right Branch
+            Item 3
+            Item 4
+```
+
+## Custom Themes
+```mermaid
+%%{init: {
+  'theme': 'forest',
+  'themeVariables': {
+    'primaryColor': '#6e548d',
+    'secondaryColor': '#b4a4cd',
+    'tertiaryColor': '#d6cce3',
+    'mainBkg': '#fff',
+    'nodeBorder': '#000',
+    'lineColor': '#6e548d',
+    'fontSize': '16px'
+  }
+}}%%
+mindmap
+    root((Themed Example))
+        Branch 1
+            Leaf 1
+            Leaf 2
+        Branch 2
+            Leaf 3
+            Leaf 4
+```
+
+## Icons and Emojis
 ```mermaid
 mindmap
-  root((Learning Path))
-    Beginner
-      Fundamentals
-        Syntax
-        Variables
-        Functions
-      Basic Tools
-        IDE
-        Git
-        Terminal
-    Intermediate
-      Design Patterns
-      Testing
-      Frameworks
-    Advanced
-      System Design
-      Architecture
-      Performance
-      Security
+    root((🎯 Project))
+        📱 Mobile
+            iOS
+            Android
+        💻 Web
+            Frontend
+            Backend
+        🔧 Tools
+            Git
+            Docker
 ```
 
-## Project Management
-
+## Complex Styling Example
 ```mermaid
+%%{init: {
+  'theme': 'dark',
+  'themeVariables': {
+    'primaryColor': '#ff6b6b',
+    'secondaryColor': '#4ecdc4',
+    'tertiaryColor': '#45b7af',
+    'mainBkg': '#2f3640',
+    'nodeBorder': '#fff',
+    'lineColor': '#fff',
+    'fontSize': '14px'
+  },
+  'mindmap': {
+    'padding': 15,
+    'rankSpacing': 80,
+    'nodeSpacing': 40
+  }
+}}%%
 mindmap
-  root((Project))
-    Planning
-      Requirements
-        User Stories
-        Acceptance Criteria
-      Timeline
-        Milestones
-        Deadlines
-      Resources
-        Team
-        Budget
-    Execution
-      Development
-      Testing
-      Deployment
-    Monitoring
-      Metrics
-      Feedback
-      Improvements
+    root((🚀 System)):::root
+        Frontend:::frontend
+            React:::tech
+            Vue:::tech
+        Backend:::backend
+            API:::tech
+            Database:::tech
+        DevOps:::devops
+            CI/CD:::tech
+            Monitoring:::tech
+
+classDef root fill:#ff6b6b,stroke:#fff,stroke-width:2px,color:#fff
+classDef frontend fill:#4ecdc4,stroke:#fff,color:#000
+classDef backend fill:#45b7af,stroke:#fff,color:#000
+classDef devops fill:#2d3436,stroke:#fff,color:#fff
+classDef tech fill:none,stroke:#fff,color:#fff
 ```
 
-## Creative Process
+## Key Styling Options:
 
-```mermaid
-mindmap
-  root((Creativity))
-    Inspiration
-      Nature
-      Art
-      Technology
-    Ideation
-      Brainstorming
-      Mind Mapping
-      Sketching
-    Development
-      Prototyping
-      Testing
-      Iteration
-    Launch
-      Marketing
-      Distribution
-      Feedback
+1. Node Shapes:
+   - `((Double Circle))`
+   - `[Square]`
+   - `(Round)`
+   - `{{Curly}}`
+   - `))Curved((`
+
+2. Theme Variables:
+   - primaryColor
+   - backgroundColor
+   - lineColor
+   - mainBkg
+   - nodeBorder
+   - fontSize
+
+3. Layout Controls:
+   - padding
+   - rankSpacing
+   - nodeSpacing
+
+4. Class Definitions:
+   - fill
+   - stroke
+   - stroke-width
+   - color
+
+5. Available Themes:
+   - default
+   - base
+   - forest
+   - dark
+   - neutral
+
+6. Special Features:
+   - Emoji support 
+   - Icons (limited on GitHub)
+   - Custom class styles
+   - Direction control
 ```
 
-## Personal Growth
-
-```mermaid
-mindmap
-  root((Growth))
-    Physical
-      Exercise
-        Strength
-        Cardio
-      Nutrition
-        Diet
-        Supplements
-      Rest
-        Sleep
-        Recovery
-    Mental
-      Learning
-      Meditation
-      Goals
-    Social
-      Family
-      Friends
-      Network
-```
-
-## Business Strategy
-
-```mermaid
-mindmap
-  root((Strategy))
-    Market Analysis
-      Competitors
-      Trends
-      Opportunities
-    Product
-      Features
-      Pricing
-      Roadmap
-    Marketing
-      Digital
-        Social
-        SEO
-        Ads
-      Traditional
-        Print
-        Events
-    Operations
-      Team
-      Processes
-      Tools
-```
-
-## Environmental Impact
-
-```mermaid
-mindmap
-  root((Sustainability))
-    Energy
-      Renewable
-        Solar
-        Wind
-        Hydro
-      Conservation
-        Efficiency
-        Smart Grid
-    Waste
-      Reduction
-      Recycling
-      Composting
-    Transport
-      Electric
-      Public
-      Cycling
-```
-
-## Knowledge Base
-
-```mermaid
-mindmap
-  root((Knowledge))
-    Science
-      Physics
-      Chemistry
-      Biology
-    Technology
-      AI
-      Blockchain
-      IoT
-    Arts
-      Music
-      Visual
-      Literature
-    History
-      Ancient
-      Modern
-      Contemporary
-```
-
-## Innovation Pipeline
-
-```mermaid
-mindmap
-  root((Innovation))
-    Research
-      Market
-      Technology
-      Users
-    Design
-      Concepts
-      Prototypes
-      Testing
-    Development
-      MVP
-      Features
-      Integration
-    Launch
-      Beta
-      Release
-      Scale
-```
-
-## Health System
-
-```mermaid
-mindmap
-  root((Health))
-    Prevention
-      Diet
-        Nutrition
-        Hydration
-      Exercise
-        Cardio
-        Strength
-      Wellness
-        Mental
-        Physical
-    Treatment
-      Primary Care
-      Specialists
-      Emergency
-    Recovery
-      Therapy
-      Medication
-      Support
-```
-
-```
-
-```
+Note that some advanced styling features might be limited in GitHub's Mermaid implementation compared to the full Mermaid spec. GitHub specifically supports a subset of Mermaid's features for security reasons. Would you like me to elaborate on any specific styling aspect?
