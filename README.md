@@ -1,6 +1,8 @@
 # Mind Map Inspiration Gallery
 
 ## Software Architecture
+
+```mermaid
 mindmap
   root((System))
     Frontend
@@ -30,8 +32,11 @@ mindmap
       CI/CD
       Monitoring
       Scaling
+```
 
 ## Learning Journey
+
+```mermaid
 mindmap
   root((Learning Path))
     Beginner
@@ -52,8 +57,11 @@ mindmap
       Architecture
       Performance
       Security
+```
 
 ## Project Management
+
+```mermaid
 mindmap
   root((Project))
     Planning
@@ -74,8 +82,11 @@ mindmap
       Metrics
       Feedback
       Improvements
+```
 
 ## Creative Process
+
+```mermaid
 mindmap
   root((Creativity))
     Inspiration
@@ -94,8 +105,11 @@ mindmap
       Marketing
       Distribution
       Feedback
+```
 
 ## Personal Growth
+
+```mermaid
 mindmap
   root((Growth))
     Physical
@@ -116,8 +130,11 @@ mindmap
       Family
       Friends
       Network
+```
 
 ## Business Strategy
+
+```mermaid
 mindmap
   root((Strategy))
     Market Analysis
@@ -140,8 +157,11 @@ mindmap
       Team
       Processes
       Tools
+```
 
 ## Environmental Impact
+
+```mermaid
 mindmap
   root((Sustainability))
     Energy
@@ -160,8 +180,11 @@ mindmap
       Electric
       Public
       Cycling
+```
 
 ## Knowledge Base
+
+```mermaid
 mindmap
   root((Knowledge))
     Science
@@ -180,8 +203,11 @@ mindmap
       Ancient
       Modern
       Contemporary
+```
 
 ## Innovation Pipeline
+
+```mermaid
 mindmap
   root((Innovation))
     Research
@@ -200,8 +226,11 @@ mindmap
       Beta
       Release
       Scale
+```
 
 ## Health System
+
+```mermaid
 mindmap
   root((Health))
     Prevention
@@ -222,3 +251,8 @@ mindmap
       Therapy
       Medication
       Support
+```
+
+```
+
+```
