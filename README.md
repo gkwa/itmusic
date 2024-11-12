@@ -338,9 +338,6 @@ gitGraph
     checkout feature/tests
     commit id: "add-integration-test"
     commit id: "add-integration-test-fixture"
-
-    checkout main
-    merge feature/astound tag: "v1.0"
 ```
 
 Now the flow shows:
