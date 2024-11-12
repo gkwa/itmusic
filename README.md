@@ -268,3 +268,47 @@ Now the development flow shows:
 6. Final merge back to main
 
 Is this closer to what you were envisioning?
+
+# Astound Project Development Flow
+
+```mermaid
+gitGraph
+    commit id: "initial-setup" tag: "v0.1"
+    commit id: "playwright-template"
+
+    branch feature/astound
+    checkout feature/astound
+    commit id: "add-scraping-logic"
+    commit id: "basic-scraping-working"
+
+    branch feature/telemetry
+    checkout feature/telemetry
+    commit id: "add-opentelemetry"
+    commit id: "ot-instrumentation"
+    commit id: "ot-complexity-abandoned"
+
+    checkout feature/astound
+    merge feature/telemetry id: "merge-basic-telemetry"
+    commit id: "simplify-logic"
+
+    branch feature/tests
+    checkout feature/tests
+    commit id: "add-test-framework"
+    commit id: "add-unit-tests"
+    commit id: "improve-coverage-wip"
+
+    checkout feature/astound
+    merge feature/tests id: "merge-basic-tests"
+
+    checkout main
+    merge feature/astound tag: "v1.0"
+```
+
+Now the flow shows:
+
+1. The complex OT work stays unmerged in feature/telemetry
+2. Only the basic telemetry setup gets merged back
+3. Similarly, only the basic test framework and unit tests get merged
+4. The coverage improvements remain as work-in-progress in feature/tests
+
+Is this a more accurate representation of the branches that were actually merged?
