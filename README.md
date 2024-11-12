@@ -1,6 +1,7 @@
 # Mermaid Mindmap Styling Guide
 
 ## Node Shapes
+
 ```mermaid
 mindmap
     root((Circle))
@@ -13,6 +14,7 @@ mindmap
 ```
 
 ## Colors and Formatting
+
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffcccc', 'backgroundColor': '#ffffff', 'lineColor': '#ff0000'}}}%%
 mindmap
@@ -28,6 +30,7 @@ classDef specialclass fill:#fff,stroke:#333,stroke-width:4px
 ```
 
 ## Layout Directions
+
 ```mermaid
 %%{init: {'mindmap': {'padding': 20, 'rankSpacing': 100, 'nodeSpacing': 60}}}%%
 mindmap
@@ -41,6 +44,7 @@ mindmap
 ```
 
 ## Custom Themes
+
 ```mermaid
 %%{init: {
   'theme': 'forest',
@@ -65,6 +69,7 @@ mindmap
 ```
 
 ## Icons and Emojis
+
 ```mermaid
 mindmap
     root((🎯 Project))
@@ -80,6 +85,7 @@ mindmap
 ```
 
 ## Complex Styling Example
+
 ```mermaid
 %%{init: {
   'theme': 'dark',
@@ -120,6 +126,7 @@ classDef tech fill:none,stroke:#fff,color:#fff
 ## Key Styling Options:
 
 1. Node Shapes:
+
    - `((Double Circle))`
    - `[Square]`
    - `(Round)`
@@ -127,6 +134,7 @@ classDef tech fill:none,stroke:#fff,color:#fff
    - `))Curved((`
 
 2. Theme Variables:
+
    - primaryColor
    - backgroundColor
    - lineColor
@@ -135,17 +143,20 @@ classDef tech fill:none,stroke:#fff,color:#fff
    - fontSize
 
 3. Layout Controls:
+
    - padding
    - rankSpacing
    - nodeSpacing
 
 4. Class Definitions:
+
    - fill
    - stroke
    - stroke-width
    - color
 
 5. Available Themes:
+
    - default
    - base
    - forest
@@ -153,10 +164,12 @@ classDef tech fill:none,stroke:#fff,color:#fff
    - neutral
 
 6. Special Features:
-   - Emoji support 
+   - Emoji support
    - Icons (limited on GitHub)
    - Custom class styles
    - Direction control
+
 ```
 
 Note that some advanced styling features might be limited in GitHub's Mermaid implementation compared to the full Mermaid spec. GitHub specifically supports a subset of Mermaid's features for security reasons. Would you like me to elaborate on any specific styling aspect?
+```
