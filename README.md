@@ -195,3 +195,30 @@ stateDiagram-v2
        on core functionality
    end note
 ```
+
+# Astound Project Development Flow 2
+
+```mermaid
+gitGraph
+   commit id: "initial-setup" tag: "v0.1"
+   commit id: "playwright-template"
+
+   branch feature/astound
+   checkout feature/astound
+   commit id: "add-scraping-logic"
+   commit id: "basic-scraping-working"
+
+   branch feature/telemetry
+   checkout feature/telemetry
+   commit id: "add-opentelemetry"
+   commit id: "ot-instrumentation"
+   commit id: "ot-complexity"
+
+   checkout feature/astound
+   merge feature/telemetry
+   commit id: "simplify-logic"
+   commit id: "add-unit-tests"
+
+   checkout main
+   merge feature/astound tag: "v1.0"
+```
