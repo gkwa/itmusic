@@ -312,3 +312,44 @@ Now the flow shows:
 4. The coverage improvements remain as work-in-progress in feature/tests
 
 Is this a more accurate representation of the branches that were actually merged?
+
+# Astound Project Development Flow
+
+```mermaid
+gitGraph
+    commit id: "initial-setup" tag: "v0.1"
+    commit id: "playwright-template"
+
+    branch feature/astound
+    checkout feature/astound
+    commit id: "add-scraping-logic"
+    commit id: "basic-scraping-working"
+
+    branch feature/telemetry
+    checkout feature/telemetry
+    commit id: "add-opentelemetry"
+    commit id: "ot-instrumentation"
+    commit id: "ot-complexity-abandoned"
+
+    checkout feature/astound
+    commit id: "simplify-logic"
+
+    branch feature/tests
+    checkout feature/tests
+    commit id: "add-test-framework"
+    commit id: "add-unit-tests"
+    commit id: "improve-coverage-wip"
+
+    checkout main
+    merge feature/astound tag: "v1.0"
+```
+
+Now the flow shows:
+
+1. Feature branches are created but never merged back
+2. The feature/telemetry branch gets abandoned after complexity
+3. The feature/tests branch remains separate with WIP coverage
+4. Only the feature/astound work makes it back to main
+5. No merges between feature branches
+
+Is this closer to what you wanted? The telemetry and tests branches remain as separate, unmerged experiments?
