@@ -258,17 +258,6 @@ gitGraph
     merge feature/astound tag: "v1.0"
 ```
 
-Now the development flow shows:
-
-1. Initial setup
-2. Astound feature branch
-3. Telemetry branch with complexity
-4. Back to astound for simplification
-5. Separate testing branch for proper test implementation
-6. Final merge back to main
-
-Is this closer to what you were envisioning?
-
 # Astound Project Development Flow
 
 ```mermaid
@@ -304,15 +293,6 @@ gitGraph
     merge feature/astound tag: "v1.0"
 ```
 
-Now the flow shows:
-
-1. The complex OT work stays unmerged in feature/telemetry
-2. Only the basic telemetry setup gets merged back
-3. Similarly, only the basic test framework and unit tests get merged
-4. The coverage improvements remain as work-in-progress in feature/tests
-
-Is this a more accurate representation of the branches that were actually merged?
-
 # Astound Project Development Flow
 
 ```mermaid
@@ -339,13 +319,3 @@ gitGraph
     commit id: "add-integration-test"
     commit id: "add-integration-test-fixture"
 ```
-
-Now the flow shows:
-
-1. Feature branches are created but never merged back
-2. The feature/telemetry branch gets abandoned after complexity
-3. The feature/tests branch remains separate with WIP coverage
-4. Only the feature/astound work makes it back to main
-5. No merges between feature branches
-
-Is this closer to what you wanted? The telemetry and tests branches remain as separate, unmerged experiments?
