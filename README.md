@@ -169,3 +169,29 @@ Note that GitHub's Mermaid implementation doesn't support:
 
 Would you like me to show more examples of working combinations?
 ```
+
+# Astound Project Development Flow
+
+```mermaid
+stateDiagram-v2
+   [*] --> PlaywrightTemplate
+   PlaywrightTemplate --> AstoundScraping: Add Astound Logic
+
+   AstoundScraping --> OpenTelemetry: Add Monitoring
+   OpenTelemetry --> OTHell: Code Gets Messy
+
+   OTHell --> AstoundBranch: Back to Basics
+   AstoundBranch --> UnitTests: Add Tests
+
+   UnitTests --> [*]: Project Complete
+
+   note right of OpenTelemetry
+       OT code starts to overshadow
+       core scraping logic
+   end note
+
+   note left of AstoundBranch
+       Simplified branch focusing
+       on core functionality
+   end note
+```
