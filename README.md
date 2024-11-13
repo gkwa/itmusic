@@ -309,13 +309,11 @@ gitGraph
     checkout feature/telemetry
     commit id: "add-opentelemetry"
     commit id: "ot-instrumentation"
-    commit id: "ot-complexity"
+    commit id: "ot-complexity-abandoned"
 
     checkout feature/astound
     commit id: "simplify-logic"
-
-    branch feature/tests
-    checkout feature/tests
-    commit id: "add-integration-test"
-    commit id: "add-integration-test-fixture"
+    commit id: "add-test-framework"
+    commit id: "add-unit-tests"
+    commit id: "improve-coverage-wip"
 ```
