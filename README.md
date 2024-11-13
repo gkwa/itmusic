@@ -309,7 +309,7 @@ gitGraph
     checkout feature/telemetry
     commit id: "add-opentelemetry"
     commit id: "ot-instrumentation"
-    commit id: "ot-complexity-abandoned"
+    commit id: "ot-complexity-on-hold-for-now"
 
     checkout feature/astound
     commit id: "add-unit-tests"
