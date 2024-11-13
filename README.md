@@ -312,8 +312,6 @@ gitGraph
     commit id: "ot-complexity-abandoned"
 
     checkout feature/astound
-    commit id: "simplify-logic"
-    commit id: "add-test-framework"
     commit id: "add-unit-tests"
     commit id: "improve-coverage-wip"
 ```
